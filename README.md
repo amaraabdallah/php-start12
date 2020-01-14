@@ -40,7 +40,17 @@ One target could be the duplicate html needed for each page of our website.
 
 Be ingenious  !
 
-### Single post pages
+## Security
+
+Find a way to store this password more securely, at least !
+
+## Sessions
+
+Once logged, we would like to see the connected username on each page of both the website and the app.
+
+> You can wait for our backend courses before taking following tasks. You can also try on your own if you feel brave enough ;) ...
+
+## Single post pages
 
 We would like to have dedicated pages for each of our posts.
 
@@ -57,13 +67,9 @@ A modal of some kind could do the job. But we will need a more maintainable solu
 
 Hints: Think SPA...
 
-### Security
+## Content writing
 
-Find a way to store this password more securely, at least !
-
-### Content writing
-
-#### FileSystem
+### FileSystem
 We could use Markdown...  
 And why not front-matters...
 
@@ -71,6 +77,6 @@ Hints (others could be found aswell) :
 [Parsedown | Markdown Parser in PHP](https://parsedown.org/)  
 [yaml-front-matter | To the point front matter parser](https://github.com/spatie/yaml-front-matter)
 
-#### DataBase
+### DataBase
 
 We could also use a database... ;)
