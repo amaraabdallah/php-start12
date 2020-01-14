@@ -40,6 +40,22 @@ One target could be the duplicate html needed for each page of our website.
 
 Be ingenious  !
 
+## Single post pages
+
+We would like to have dedicated pages for each of our posts.
+
+**Website**
+
+We need dynamic URLs for this. We would like our posts to be available under `http://<oursite>/post?id=1` for exemple, for the post with id: 1.
+
+Hints: Think about URL query parameters and $_GET superglobal.
+
+**App**
+
+A modal of some kind could do the job. But we will need a more maintainable solution, and possibly dynamic URLs as well.
+
+Hints: Think SPA...
+
 ## Security
 
 Find a way to store this password more securely, at least !
@@ -50,22 +66,16 @@ Once logged, we would like to see the connected username on each page of both th
 
 > You can wait for our backend courses before taking following tasks. You can also try on your own if you feel brave enough ;) ...
 
-## Single post pages
 
-We would like to have dedicated pages for each of our posts.
+## URL Rewriting
 
 **Website**
 
-We need dynamic URLs for this. We would like our posts to be available under `http://<oursite>/post/1` for exemple, for the post with id: 1.  
+We would like to have clean URLs for our posts pages on our website. For example, post with id: 1 should be visible on page `http://<oursite>/post/1`.
+
 We need URL rewriting to achieve this.
 
 Hints: Think Apache...
-
-**App**
-
-A modal of some kind could do the job. But we will need a more maintainable solution, and possibly dynamic URLs as well.
-
-Hints: Think SPA...
 
 ## Content writing
 
