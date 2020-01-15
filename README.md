@@ -46,7 +46,7 @@ We would like to have dedicated pages for each of our posts.
 
 **Website**
 
-We need dynamic URLs for this. We would like our posts to be available under `http://<oursite>/post?id=1` for exemple, for the post with id: 1.
+We need dynamic URLs for this. We would like our posts to be available under `http://<oursite>/post.php?id=1` for exemple, for the post with id: 1.
 
 Hints: Think about URL query parameters and $_GET superglobal.
 
