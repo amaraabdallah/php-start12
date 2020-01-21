@@ -2,7 +2,6 @@ const $main = document.querySelector('main');
 const $form = document.querySelector('form');
 const $username = document.querySelector('input[name="username"]');
 const $password = document.querySelector('input[name="password"]');
-
 $form.addEventListener('submit', (evt) => {
   evt.preventDefault();
   // Récupérer les valeurs du formulaire
@@ -18,16 +17,36 @@ $form.addEventListener('submit', (evt) => {
     })
     .then(res => res.json())
     .then(data => {
-      // Lecture de la réponse
-      if(data && data.success){
-        $main.innerHTML = `
-        <p>Hello ${data.username}</p>
-        `; 
-      }else{
-        // Mauvais login
-        alert("Bad login");
-        $username.value = ""
-        $password.value = ""
-      }
+        // Lecture de la réponse
+        if (data && data.success) {
+          fetch('http://localhost/php-start12/api/posts.php') 
+            .then(res => res.json())
+            .then(dataPost => updateView(dataPost));
+        }else{
+          alert("va t'habiller");
+          $username.value = ""
+          $password.value = ""
+        }
     })
-})
+          function updateView(dataPost) {
+            $main.innerHTML = `
+                  <p id= "user">Salut mon Ami ${data.username}</p>
+                  <p id= "posts">Tiens, Amuses Toi</p>
+   
+            <ul>
+            ${
+              dataPost.map(post =>`
+                  <li>
+                     <h3 class ="title">${post.title}</h3> 
+                     <h3 class ="body">${post.body }</h3>
+                </li> `)  
+
+             .join('')
+            }
+            
+             </ul>
+ 
+    `;
+          }
+        })
+

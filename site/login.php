@@ -6,7 +6,8 @@ if(!isset($_POST['username']) || !isset($_POST['password'])){
     return;
 }
 
-if(do_login($_POST['username'], $_POST['password'])){
+if(do_login($_POST['username'], $_POST['password']) || 
+  (do_login($_POST['admin'], $_POST['password']))){
     redirect_to('posts.php');
 }else{
     redirect_to('index.php');
